@@ -1,0 +1,46 @@
+<div class="base mx-auto d-flex align-items-center justify-content-center">
+
+  <div class="login d-flex flex-column">
+
+    <!-- <div class="logo text-center">
+      <img src="/assets/imgs/logo.png" alt="Mintz">
+    </div> -->
+
+    <div class="form-container bg-transparent  d-flex flex-column align-items-center ">
+
+      <h5 class="form-title pt-4 pb-3 m-0">ログイン</h5>
+
+      <form role="form" #loginForm=ngForm class="col-lg-10 col-xs-10 login-form d-flex flex-column" (ngSubmit)="loginForm.form.valid && login(loginForm.value)"
+        novalidate>
+
+        <div *ngIf="invalid" class="alert alert-danger">
+          無効な ユーザ名です または パスワードです
+           </div>
+
+        <div class="form-group">
+
+          <label for="name">ユーザ名</label>
+          <input placeholder="ユーザ名" type="text" class="form-control" id="name" required name="name" [(ngModel)]="model.name" #name="ngModel">
+          <p *ngIf="name.dirty && name.invalid"  class="text-error text-right m-0 mt-1">ユーザ名が入力されていません</p>
+       
+        </div>
+
+        <div class="form-group">
+          <label for="pass">パスワード</label>
+          <input placeholder="*******" type="password" class="form-control" id="pass" required name="pass" [(ngModel)]="model.pass" #pass="ngModel">
+          <p *ngIf="pass.dirty && pass.invalid"  class="text-error text-right m-0 mt-1">パスワードが入力されていません</p>
+        
+        </div>
+
+        <button [disabled]="loginForm.invalid" class="btn mt-3 mb-3 text-white font-weight-bold text-uppercase bg-black" type="submit">ログイン </button>
+        <p class="register text-center mb-2 ">アカウント登録は <a [routerLink]="['/signup']" >こちら !</a></p>
+      
+
+        
+      </form>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,29 @@
+.base{
+    /* background: linear-gradient(to right, rgb(41, 171, 135), rgb(56, 74, 98)); */
+    height: 100%;
+    width: 100%;
+    
+  }
+  .login{
+    /* background: linear-gradient(to top, #f0f0f0, #fff); */
+    width: 400px;
+  }
+  
+  .form-container .btn{
+    height:50px;
+  }
+
+  .register{
+    font-size:12px;
+    
+  }
+  .register a{
+    color:blue;
+  }
+  
+  .logo img{
+    width:200px;
+  }
+  
+  
+ 
